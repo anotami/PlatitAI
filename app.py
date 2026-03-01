@@ -10,6 +10,9 @@ st.set_page_config(page_title="PlatitAI - Gestor Financiero", layout="wide")
 if 'data' not in st.session_state:
     st.session_state.data = None
 
+if 'tipo_data' not in st.session_state:
+    st.session_state.tipo_data = None # Para saber si es "Ejemplo" o "Usuario"
+
 if 'mis_categorias' not in st.session_state:
     st.session_state.mis_categorias = [
         'Supermercados', 'Restaurantes & Delivery', 'Transporte & Auto', 
@@ -68,16 +71,18 @@ with st.sidebar:
     st.markdown("---")
     
     if st.session_state.data is None:
+        st.info("Sube tus datos para habilitar el menú")
         menu = "Inicio"
     else:
         menu = st.radio(
             "Navegación",
-            ["🔥 Vista General", "📊 Análisis Detallado", "✏️ Recategorizar", "⚙️ Configuración"],
+            ["🔥 Vista General", "📊 Análisis Detallado", "✏️ Recategorizar", "⚙️ Exportar"],
             index=0
         )
         st.markdown("---")
         if st.button("🗑️ Reiniciar Sesión", use_container_width=True):
             st.session_state.data = None
+            st.session_state.tipo_data = None
             st.rerun()
 
 # ==================== LÓGICA DE PÁGINAS ====================
@@ -90,44 +95,55 @@ if st.session_state.data is None:
     
     with col_txt:
         st.markdown("""
-        ### El futuro de tu control financiero.
-        Sube tus movimientos y deja que nuestra inteligencia los organice por ti.
+        ### Tu dinero, bajo control.
+        Organiza tus movimientos bancarios de forma inteligente.
         
-        **Instrucciones:**
-        1. Configura tus categorías a la derecha si lo deseas.
-        2. Carga tu archivo CSV o Excel de estados de cuenta.
+        **Pasos:**
+        1. Ajusta tus categorías a la derecha.
+        2. Selecciona datos de ejemplo o sube los tuyos.
         """)
         
-        uploaded_file = st.file_uploader("Cargar movimientos", type=["csv", "xlsx"])
+        uploaded_file = st.file_uploader("Subir CSV o Excel", type=["csv", "xlsx"])
         
         c1, c2 = st.columns(2)
         with c1:
-            if st.button("🚀 Usar Ejemplo", use_container_width=True):
+            if st.button("🚀 Usar Datos de Ejemplo", use_container_width=True):
                 if os.path.exists('gastos.csv'):
                     st.session_state.data = cargar_datos('gastos.csv')
+                    st.session_state.tipo_data = "Ejemplo"
                     st.rerun()
+                else:
+                    st.error("gastos.csv no encontrado.")
         with c2:
-            if uploaded_file and st.button("Procesar Archivo", use_container_width=True):
+            if uploaded_file and st.button("Procesar Mi Archivo", use_container_width=True):
                 st.session_state.data = cargar_datos(uploaded_file, uploaded_file.name.endswith('.xlsx'))
+                st.session_state.tipo_data = "Usuario"
                 st.rerun()
 
     with col_cfg:
-        st.subheader("⚙️ Estructura de Categorías")
+        st.subheader("⚙️ Configuración inicial")
         cats_editadas = st.text_area(
-            "Edita tus categorías (una por línea):", 
+            "Define tus categorías (una por línea):", 
             value="\n".join(st.session_state.mis_categorias),
-            height=200
+            height=180
         )
-        if st.button("💾 Guardar Categorías"):
+        if st.button("💾 Guardar Estructura"):
             st.session_state.mis_categorias = [c.strip() for c in cats_editadas.split("\n") if c.strip()]
-            st.success("Estructura actualizada.")
+            st.success("Estructura guardada.")
 
 else:
-    # --- TABLERO ACTIVO ---
+    # --- CABECERA DINÁMICA ---
+    if st.session_state.tipo_data == "Ejemplo":
+        st.markdown("<h1 style='text-align: center; color: #888888;'>🛠️ Datos de Ejemplo</h1>", unsafe_allow_html=True)
+    else:
+        st.markdown("<h1 style='text-align: center; color: #2E7D32;'>👤 Tus Datos</h1>", unsafe_allow_html=True)
+    
+    st.markdown("---")
+
     df = st.session_state.data
     df['Mes'] = df['Fecha'].dt.strftime('%Y-%m')
     
-    # Filtros comunes en Sidebar (solo aparecen si hay data)
+    # Filtros comunes en Sidebar
     with st.sidebar:
         st.subheader("🔍 Filtros")
         meses = sorted(df['Mes'].unique())
@@ -139,7 +155,6 @@ else:
     df_f = df[(df['Mes'].isin(meses_sel)) & (df['Categoria_Final'].isin(cats_sel))]
 
     if menu == "🔥 Vista General":
-        st.header("🔥 Vista General")
         m1, m2, m3 = st.columns(3)
         m1.metric("Gasto Total", f"S/ {df_f['Monto'].sum():,.2f}")
         m2.metric("Operaciones", len(df_f))
@@ -148,12 +163,11 @@ else:
         st.markdown("---")
         if not df_f.empty:
             pivot = df_f.pivot_table(index='Categoria_Final', columns='Mes', values='Monto', aggfunc='sum').fillna(0)
-            st.plotly_chart(px.imshow(pivot, text_auto='.0f', color_continuous_scale='OrRd', title="Mapa de Calor de Gastos"), use_container_width=True)
+            st.subheader("Mapa de Calor: Intensidad Mensual")
+            st.plotly_chart(px.imshow(pivot, text_auto='.0f', color_continuous_scale='Blues', aspect="auto"), use_container_width=True)
 
     elif menu == "📊 Análisis Detallado":
-        st.header("📊 Análisis Detallado")
-        
-        st.subheader("Gasto Acumulado Mensual")
+        st.subheader("Gasto Acumulado por Mes")
         fig_bar = px.bar(df_f.groupby(['Mes', 'Categoria_Final'])['Monto'].sum().reset_index(), 
                         x='Mes', y='Monto', color='Categoria_Final', text_auto='.2s')
         st.plotly_chart(fig_bar, use_container_width=True)
@@ -164,12 +178,12 @@ else:
             top_c = df_f.groupby('Comercio')['Monto'].sum().nlargest(10).reset_index()
             st.plotly_chart(px.bar(top_c, x='Monto', y='Comercio', orientation='h', color='Monto'), use_container_width=True)
         with c_r:
-            st.subheader("Distribución por Categoría")
+            st.subheader("Composición por Categoría")
             st.plotly_chart(px.pie(df_f, names='Categoria_Final', values='Monto', hole=0.4), use_container_width=True)
 
     elif menu == "✏️ Recategorizar":
-        st.header("✏️ Recategorizar")
-        st.write("Cambia la categoría de un comercio para normalizar tus datos.")
+        st.header("✏️ Editor Manual")
+        st.write("Cambia la categoría de un comercio para todos sus registros.")
         
         resumen = df.groupby('Comercio').agg(
             Total=('Monto', 'sum'),
@@ -195,13 +209,13 @@ else:
             for _, row in df_editado.iterrows():
                 if row['Categoria_Actual'] != row['Nueva_Categoria']:
                     st.session_state.data.loc[st.session_state.data['Comercio'] == row['Comercio'], 'Categoria_Final'] = row['Nueva_Categoria']
-            st.success("Datos actualizados.")
+            st.success("Dashboard actualizado.")
             st.rerun()
 
-    elif menu == "⚙️ Configuración":
-        st.header("⚙️ Configuración de la Aplicación")
-        st.write("Desde aquí puedes ver la tabla de datos cruda y exportarla.")
+    elif menu == "⚙️ Exportar":
+        st.header("⚙️ Gestión de Datos")
+        st.write("Revisa tu tabla final y descárgala.")
         st.dataframe(df_f[['Fecha', 'Comercio', 'Categoria_Final', 'Monto']].sort_values('Fecha', ascending=False), use_container_width=True)
         
-        csv_download = df.to_csv(index=False).encode('latin1')
-        st.download_button("📥 Descargar CSV procesado", data=csv_download, file_name="gastos_procesados_platit.csv", mime="text/csv")
+        csv_download = df.to_csv(index=False).encode('utf-8')
+        st.download_button("📥 Descargar Datos Procesados (CSV)", data=csv_download, file_name="platit_data.csv", mime="text/csv")
