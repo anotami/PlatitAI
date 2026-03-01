@@ -4,13 +4,15 @@ import plotly.express as px
 import os
 
 # Configuración de página
-st.set_page_config(page_title="PlatitAI - Inteligencia Financiera", layout="wide")
+st.set_page_config(page_title="PlatitAI - Gestor Financiero", layout="wide")
 
 # ==================== ESTADO DE SESIÓN ====================
 if 'data' not in st.session_state:
     st.session_state.data = None
+
 if 'tipo_data' not in st.session_state:
-    st.session_state.tipo_data = None
+    st.session_state.tipo_data = None # Para saber si es "Ejemplo" o "Usuario"
+
 if 'mis_categorias' not in st.session_state:
     st.session_state.mis_categorias = [
         'Supermercados', 'Restaurantes & Delivery', 'Transporte & Auto', 
@@ -18,24 +20,23 @@ if 'mis_categorias' not in st.session_state:
         'Compras & Tech', 'Transferencias & Otros'
     ]
 
-# ==================== CARGA Y PROCESAMIENTO ====================
+# ==================== FUNCIONES DE PROCESAMIENTO ====================
 
 def aplicar_inteligencia(df, categorias_usuario):
-    # Normalización para evitar problemas con tildes y mayúsculas
-    df['Comercio'] = df['Descripcion'].str.upper().str.strip()
+    df['Comercio'] = df['Descripcion'].str.upper().str.replace('*', '', regex=False).str.strip()
     
     reglas = {
-        'Supermercados': ['wong', 'metro', 'tottus', 'mass', 'oxxo', 'tambo', 'jumbo', 'market'],
-        'Restaurantes & Delivery': ['rappi', 'pedidosya', 'starbucks', 'kfc', 'mcdonalds', 'cafe', 'pizz', 'delivery'],
-        'Transporte & Auto': ['uber', 'cabify', 'taxi', 'grifo', 'peaje', 'apparka', 'gasolin'],
-        'Salud & Bienestar': ['farmacia', 'clinica', 'smart fit', 'smartfit', 'dent', 'fisio', 'pacifico'],
-        'Hogar & Servicios': ['sodimac', 'maestro', 'promart', 'movistar', 'claro', 'enel', 'sedapal', 'calidda'],
-        'Viajes & Ocio': ['airbnb', 'booking', 'latam', 'hotel', 'cine', 'spotify', 'youtube', 'netflix', 'disney'],
-        'Compras & Tech': ['apple', 'aliexpress', 'amazon', 'ebay', 'falabella', 'ripley', 'h&m', 'zara'],
-        'Transferencias & Otros': ['plin-', 'yape', 'transferencia', 'cargo']
+        'Supermercados': ['wong', 'metro', 'tottus', 'mass', 'oxxo', 'tambo', 'market', 'jumbo', 'carrefour'],
+        'Restaurantes & Delivery': ['rappi', 'pedidosya', 'dominos', 'restaurante', 'cafe', 'starbucks', 'kfc', 'mcdonalds'],
+        'Transporte & Auto': ['uber', 'cabify', 'taxi', 'grifo', 'peaje', 'estacion', 'apparka', 'rutas de lima'],
+        'Salud & Bienestar': ['farmacia', 'clinica', 'pacifico', 'smart fit', 'smartfit', 'dent', 'fisio', 'spa'],
+        'Hogar & Servicios': ['sodimac', 'maestro', 'promart', 'movistar', 'claro', 'enel', 'sedapal', 'notaria'],
+        'Viajes & Ocio': ['airbnb', 'booking', 'latam', 'hotel', 'cineplanet', 'spotify', 'youtube', 'despegar', 'avianca'],
+        'Compras & Tech': ['apple', 'aliexpress', 'amazon', 'ebay', 'dji', 'h&m', 'zara', 'miniso', 'tai loy', 'falabella'],
+        'Transferencias & Otros': ['plin-', 'yape', 'cargo da ']
     }
     
-    default_cat = categorias_usuario[-1] if categorias_usuario else "Otros"
+    default_cat = categorias_usuario[-1] if categorias_usuario else "Sin Categoría"
     df['Categoria_Final'] = default_cat
     
     for cat_maestra, palabras in reglas.items():
@@ -43,29 +44,26 @@ def aplicar_inteligencia(df, categorias_usuario):
             patron = '|'.join(palabras)
             mask = df['Descripcion'].str.contains(patron, case=False, na=False)
             df.loc[mask, 'Categoria_Final'] = cat_maestra
-            
+    
+    if 'Categoria' in df.columns:
+        mask_manual = df['Categoria'].isin(categorias_usuario)
+        df.loc[mask_manual, 'Categoria_Final'] = df['Categoria']
+    
     return df
 
 def cargar_datos(file, is_excel=False):
     try:
-        if is_excel:
-            df = pd.read_excel(file)
-        else:
-            try:
-                df = pd.read_csv(file, encoding='utf-8-sig', sep=',', quoting=3)
-            except:
-                df = pd.read_csv(file, encoding='latin1', sep=',', quoting=3)
-        
+        df = pd.read_excel(file) if is_excel else pd.read_csv(file, encoding='latin1', sep=',', quoting=3)
         df.columns = df.columns.str.replace('"', '').str.strip()
         df['Fecha'] = pd.to_datetime(df['Fecha'], errors='coerce')
         df['Monto'] = pd.to_numeric(df['Monto'].astype(str).str.replace('"', '', regex=False), errors='coerce')
         df = df.dropna(subset=['Monto', 'Fecha'])
         return aplicar_inteligencia(df, st.session_state.mis_categorias)
     except Exception as e:
-        st.error(f"Error al leer el archivo: {e}")
+        st.error(f"Error: {e}")
         return None
 
-# ==================== BARRA LATERAL ====================
+# ==================== BARRA LATERAL (MENÚ) ====================
 
 with st.sidebar:
     st.markdown("<h1 style='text-align: center; color: #00A8E8;'>PlatitAI</h1>", unsafe_allow_html=True)
@@ -73,127 +71,151 @@ with st.sidebar:
     st.markdown("---")
     
     if st.session_state.data is None:
+        st.info("Sube tus datos para habilitar el menú")
         menu = "Inicio"
     else:
         menu = st.radio(
-            "Análisis",
-            ["🔥 Dashboard", "🕵️ Detector de Suscripciones", "🐜 Gastos Hormiga", "📊 Top 10 (Monto vs Freq)", "✏️ Editor", "⚙️ Ajustes"],
+            "Navegación",
+            ["🔥 Vista General", "📊 Análisis Detallado", "✏️ Recategorizar", "⚙️ Exportar"],
             index=0
         )
         st.markdown("---")
-        if st.button("🗑️ Reiniciar Sesión"):
+        if st.button("🗑️ Reiniciar Sesión", use_container_width=True):
             st.session_state.data = None
+            st.session_state.tipo_data = None
             st.rerun()
 
 # ==================== LÓGICA DE PÁGINAS ====================
 
 if st.session_state.data is None:
+    # --- PANTALLA DE INICIO ---
     st.title("Bienvenido a PlatitAI")
-    c1, c2 = st.columns(2)
-    with c1:
-        st.markdown("### 1. Sube tus datos")
-        file = st.file_uploader("CSV o Excel", type=["csv", "xlsx"])
-        if st.button("🚀 Usar Ejemplo"):
-            if os.path.exists('gastos.csv'):
-                st.session_state.data = cargar_datos('gastos.csv')
-                st.session_state.tipo_data = "Ejemplo"
+    
+    col_txt, col_cfg = st.columns([1, 1])
+    
+    with col_txt:
+        st.markdown("""
+        ### Tu dinero, bajo control.
+        Organiza tus movimientos bancarios de forma inteligente.
+        
+        **Pasos:**
+        1. Ajusta tus categorías a la derecha.
+        2. Selecciona datos de ejemplo o sube los tuyos.
+        """)
+        
+        uploaded_file = st.file_uploader("Subir CSV o Excel", type=["csv", "xlsx"])
+        
+        c1, c2 = st.columns(2)
+        with c1:
+            if st.button("🚀 Usar Datos de Ejemplo", use_container_width=True):
+                if os.path.exists('gastos.csv'):
+                    st.session_state.data = cargar_datos('gastos.csv')
+                    st.session_state.tipo_data = "Ejemplo"
+                    st.rerun()
+                else:
+                    st.error("gastos.csv no encontrado.")
+        with c2:
+            if uploaded_file and st.button("Procesar Mi Archivo", use_container_width=True):
+                st.session_state.data = cargar_datos(uploaded_file, uploaded_file.name.endswith('.xlsx'))
+                st.session_state.tipo_data = "Usuario"
                 st.rerun()
-        if file and st.button("Procesar Archivo"):
-            st.session_state.data = cargar_datos(file, file.name.endswith('.xlsx'))
-            st.session_state.tipo_data = "Usuario"
-            st.rerun()
-    with c2:
-        st.markdown("### 2. Categorías")
-        cats = st.text_area("Una por línea:", value="\n".join(st.session_state.mis_categorias), height=150)
-        if st.button("Guardar"):
-            st.session_state.mis_categorias = [c.strip() for c in cats.split("\n") if c.strip()]
-            st.success("Listo")
+
+    with col_cfg:
+        st.subheader("⚙️ Configuración inicial")
+        cats_editadas = st.text_area(
+            "Define tus categorías (una por línea):", 
+            value="\n".join(st.session_state.mis_categorias),
+            height=180
+        )
+        if st.button("💾 Guardar Estructura"):
+            st.session_state.mis_categorias = [c.strip() for c in cats_editadas.split("\n") if c.strip()]
+            st.success("Estructura guardada.")
 
 else:
-    # Header dinámico
-    label = "🛠️ DATOS DE EJEMPLO" if st.session_state.tipo_data == "Ejemplo" else "👤 TUS DATOS"
-    st.markdown(f"<h3 style='text-align: center; color: gray;'>{label}</h3>", unsafe_allow_html=True)
+    # --- CABECERA DINÁMICA ---
+    if st.session_state.tipo_data == "Ejemplo":
+        st.markdown("<h1 style='text-align: center; color: #888888;'>🛠️ Datos de Ejemplo</h1>", unsafe_allow_html=True)
+    else:
+        st.markdown("<h1 style='text-align: center; color: #2E7D32;'>👤 Tus Datos</h1>", unsafe_allow_html=True)
     
+    st.markdown("---")
+
     df = st.session_state.data
     df['Mes'] = df['Fecha'].dt.strftime('%Y-%m')
     
-    # Filtros laterales
+    # Filtros comunes en Sidebar
     with st.sidebar:
-        meses_sel = st.multiselect("Meses", sorted(df['Mes'].unique()), default=sorted(df['Mes'].unique()))
-        df_f = df[df['Mes'].isin(meses_sel)]
+        st.subheader("🔍 Filtros")
+        meses = sorted(df['Mes'].unique())
+        meses_sel = st.multiselect("Meses", meses, default=meses)
+        
+        categorias_presentes = sorted(df['Categoria_Final'].unique())
+        cats_sel = st.multiselect("Categorías", categorias_presentes, default=categorias_presentes)
+    
+    df_f = df[(df['Mes'].isin(meses_sel)) & (df['Categoria_Final'].isin(cats_sel))]
 
-    # --- PÁGINAS ---
+    if menu == "🔥 Vista General":
+        m1, m2, m3 = st.columns(3)
+        m1.metric("Gasto Total", f"S/ {df_f['Monto'].sum():,.2f}")
+        m2.metric("Operaciones", len(df_f))
+        m3.metric("Ticket Promedio", f"S/ {df_f['Monto'].mean():,.2f}" if not df_f.empty else "0")
+        
+        st.markdown("---")
+        if not df_f.empty:
+            pivot = df_f.pivot_table(index='Categoria_Final', columns='Mes', values='Monto', aggfunc='sum').fillna(0)
+            st.subheader("Mapa de Calor: Intensidad Mensual")
+            st.plotly_chart(px.imshow(pivot, text_auto='.0f', color_continuous_scale='Blues', aspect="auto"), use_container_width=True)
 
-    if menu == "🔥 Dashboard":
-        st.header("Vista General")
-        col1, col2, col3 = st.columns(3)
-        col1.metric("Gasto Total", f"S/ {df_f['Monto'].sum():,.2f}")
-        col2.metric("Transacciones", len(df_f))
-        col3.metric("Ticket Promedio", f"S/ {df_f['Monto'].mean():,.2f}")
+    elif menu == "📊 Análisis Detallado":
+        st.subheader("Gasto Acumulado por Mes")
+        fig_bar = px.bar(df_f.groupby(['Mes', 'Categoria_Final'])['Monto'].sum().reset_index(), 
+                        x='Mes', y='Monto', color='Categoria_Final', text_auto='.2s')
+        st.plotly_chart(fig_bar, use_container_width=True)
         
-        pivot = df_f.pivot_table(index='Categoria_Final', columns='Mes', values='Monto', aggfunc='sum').fillna(0)
-        st.plotly_chart(px.imshow(pivot, text_auto='.0f', color_continuous_scale='Blues', title="Mapa de Calor"), use_container_width=True)
+        c_l, c_r = st.columns(2)
+        with c_l:
+            st.subheader("Top 10 Comercios")
+            top_c = df_f.groupby('Comercio')['Monto'].sum().nlargest(10).reset_index()
+            st.plotly_chart(px.bar(top_c, x='Monto', y='Comercio', orientation='h', color='Monto'), use_container_width=True)
+        with c_r:
+            st.subheader("Composición por Categoría")
+            st.plotly_chart(px.pie(df_f, names='Categoria_Final', values='Monto', hole=0.4), use_container_width=True)
 
-    elif menu == "🕵️ Detector de Suscripciones":
-        st.header("Detector de Gastos Recurrentes")
-        st.write("Identificamos comercios con el mismo monto que aparecen en varios meses.")
+    elif menu == "✏️ Recategorizar":
+        st.header("✏️ Editor Manual")
+        st.write("Cambia la categoría de un comercio para todos sus registros.")
         
-        # Agrupar por comercio, monto y contar meses únicos
-        recurrentes = df.groupby(['Comercio', 'Monto']).agg(
-            Frecuencia=('Fecha', 'count'),
-            Meses_Unicos=('Mes', 'nunique')
-        ).reset_index()
-        
-        # Filtro: debe aparecer en al menos 2 meses distintos
-        suscripciones = recurrentes[recurrentes['Meses_Unicos'] >= 2].sort_values('Frecuencia', ascending=False)
-        
-        if not suscripciones.empty:
-            st.dataframe(suscripciones, use_container_width=True)
-            st.info("💡 Consejo: Revisa si estas suscripciones siguen siendo útiles para ti.")
-        else:
-            st.write("No se detectaron patrones recurrentes claros.")
+        resumen = df.groupby('Comercio').agg(
+            Total=('Monto', 'sum'),
+            Categoria_Actual=('Categoria_Final', 'first')
+        ).reset_index().sort_values('Total', ascending=False)
 
-    elif menu == "🐜 Gastos Hormiga":
-        st.header("Análisis de Gastos Hormiga")
-        umbral = st.slider("Define el monto máximo de un 'gasto hormiga' (S/):", 5, 50, 20)
-        
-        hormiga = df_f[df_f['Monto'] <= umbral]
-        total_h = hormiga['Monto'].sum()
-        
-        st.warning(f"Has gastado **S/ {total_h:,.2f}** en montos menores a S/ {umbral}.")
-        
-        fig_h = px.pie(hormiga, names='Comercio', values='Monto', title="¿En qué se va el goteo de dinero?")
-        st.plotly_chart(fig_h, use_container_width=True)
+        resumen['Nueva_Categoria'] = resumen['Categoria_Actual']
 
-    elif menu == "📊 Top 10 (Monto vs Freq)":
-        st.header("Ranking de Consumo")
-        col_l, col_r = st.columns(2)
-        
-        with col_l:
-            st.subheader("Top 10 por Monto (S/)")
-            top_m = df_f.groupby('Comercio')['Monto'].sum().nlargest(10).reset_index()
-            st.plotly_chart(px.bar(top_m, x='Monto', y='Comercio', orientation='h', color_discrete_sequence=['#EF553B']), use_container_width=True)
-            
-        with col_r:
-            st.subheader("Top 10 por Repetición (Veces)")
-            top_f = df_f.groupby('Comercio')['Monto'].count().nlargest(10).reset_index()
-            top_f.columns = ['Comercio', 'Visitas']
-            st.plotly_chart(px.bar(top_f, x='Visitas', y='Comercio', orientation='h', color_discrete_sequence=['#00CC96']), use_container_width=True)
+        df_editado = st.data_editor(
+            resumen,
+            column_config={
+                "Nueva_Categoria": st.column_config.SelectboxColumn(
+                    "🎯 Nueva Categoria", 
+                    options=st.session_state.mis_categorias
+                )
+            },
+            disabled=["Comercio", "Total", "Categoria_Actual"],
+            hide_index=True,
+            use_container_width=True
+        )
 
-    elif menu == "✏️ Editor":
-        st.header("Recategorización")
-        resumen = df.groupby('Comercio').agg(Total=('Monto', 'sum'), Cat=('Categoria_Final', 'first')).reset_index()
-        resumen['Nueva'] = resumen['Cat']
-        
-        editado = st.data_editor(resumen, column_config={"Nueva": st.column_config.SelectboxColumn("Nueva", options=st.session_state.mis_categorias)}, use_container_width=True)
-        
-        if st.button("Aplicar"):
-            for _, r in editado.iterrows():
-                st.session_state.data.loc[st.session_state.data['Comercio'] == r['Comercio'], 'Categoria_Final'] = r['Nueva']
+        if st.button("💾 Aplicar Cambios"):
+            for _, row in df_editado.iterrows():
+                if row['Categoria_Actual'] != row['Nueva_Categoria']:
+                    st.session_state.data.loc[st.session_state.data['Comercio'] == row['Comercio'], 'Categoria_Final'] = row['Nueva_Categoria']
+            st.success("Dashboard actualizado.")
             st.rerun()
 
-    elif menu == "⚙️ Ajustes":
-        st.header("Exportación")
-        st.dataframe(df)
-        csv = df.to_csv(index=False, encoding='utf-8-sig').encode('utf-8-sig')
-        st.download_button("Descargar CSV Limpio", csv, "platit_ai_report.csv", "text/csv")
+    elif menu == "⚙️ Exportar":
+        st.header("⚙️ Gestión de Datos")
+        st.write("Revisa tu tabla final y descárgala.")
+        st.dataframe(df_f[['Fecha', 'Comercio', 'Categoria_Final', 'Monto']].sort_values('Fecha', ascending=False), use_container_width=True)
+        
+        csv_download = df.to_csv(index=False).encode('utf-8')
+        st.download_button("📥 Descargar Datos Procesados (CSV)", data=csv_download, file_name="platit_data.csv", mime="text/csv")
