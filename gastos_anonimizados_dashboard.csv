@@ -1,0 +1,651 @@
+Fecha,Descripcion,Categoria,Monto
+2026-03-30,Bodega,Supermercados,192.51
+2026-03-29,Cafetería,Restaurantes & Delivery,217.65
+2026-03-29,Peaje,Transporte & Auto,119.76
+2026-03-27,Peaje,Transporte & Auto,5.0
+2026-03-24,Spa/Tratamiento,Salud & Bienestar,117.36
+2026-03-22,Compras Granel,Supermercados,146.94
+2026-03-22,Internet/TV,Hogar & Servicios,652.98
+2026-03-22,Reembolso,Transferencias & Otros,70.02
+2026-03-21,Gimnasio,Salud & Bienestar,517.4
+2026-03-21,Internet/TV,Hogar & Servicios,542.1
+2026-03-21,Artículos Limpieza,Hogar & Servicios,5.0
+2026-03-19,Mantenimiento Hogar,Hogar & Servicios,212.11
+2026-03-19,Estación de Servicio,Transporte & Auto,5.0
+2026-03-19,Alquiler/Cuota,Hogar & Servicios,317.0
+2026-03-19,Transferencia Familiar,Transferencias & Otros,128.55
+2026-03-19,Pasaje Aéreo,Viajes & Ocio,5.0
+2026-03-17,Restaurante Local,Restaurantes & Delivery,458.85
+2026-03-17,Comida Rápida,Restaurantes & Delivery,5.0
+2026-03-16,Consulta Médica,Salud & Bienestar,474.3
+2026-03-16,Comida Rápida,Restaurantes & Delivery,5.0
+2026-03-15,Cena Fuera,Restaurantes & Delivery,755.78
+2026-03-14,Hotel,Viajes & Ocio,374.39
+2026-03-14,Servicios Básicos,Hogar & Servicios,5.0
+2026-03-14,Pago Amigo,Transferencias & Otros,83.35
+2026-03-14,Mantenimiento,Transporte & Auto,20.31
+2026-03-13,Artículos Limpieza,Hogar & Servicios,5.0
+2026-03-12,Bodega,Supermercados,548.47
+2026-03-12,Regalo,Transferencias & Otros,204.41
+2026-03-11,Pago Amigo,Transferencias & Otros,118.23
+2026-03-10,Excursión,Viajes & Ocio,5.0
+2026-03-09,Excursión,Viajes & Ocio,2747.19
+2026-03-09,Consulta Médica,Salud & Bienestar,555.02
+2026-03-07,Tienda de Conveniencia,Supermercados,162.0
+2026-03-07,Otros,Transferencias & Otros,65.67
+2026-03-05,Cena Fuera,Restaurantes & Delivery,317.32
+2026-03-04,Transferencia Familiar,Transferencias & Otros,171.7
+2026-03-02,Cafetería,Restaurantes & Delivery,5.0
+2026-03-01,Software,Compras & Tech,5.0
+2026-02-28,Tienda de Conveniencia,Supermercados,433.23
+2026-02-28,Tienda Online,Compras & Tech,575.32
+2026-02-27,Delivery Pizza,Restaurantes & Delivery,179.48
+2026-02-27,Suscripción Digital,Compras & Tech,5.0
+2026-02-25,Cena Fuera,Restaurantes & Delivery,5.0
+2026-02-24,Hotel,Viajes & Ocio,5.0
+2026-02-24,Hotel,Viajes & Ocio,518.24
+2026-02-24,Regalo,Transferencias & Otros,6.51
+2026-02-24,Comida Rápida,Restaurantes & Delivery,5.0
+2026-02-22,Taxi/Uber,Transporte & Auto,55.21
+2026-02-21,Compras Granel,Supermercados,235.7
+2026-02-20,Reembolso,Transferencias & Otros,27.54
+2026-02-20,Bodega,Supermercados,76.55
+2026-02-19,Pago Amigo,Transferencias & Otros,86.84
+2026-02-18,Regalo,Transferencias & Otros,117.25
+2026-02-17,Mantenimiento,Transporte & Auto,71.2
+2026-02-17,Cafetería,Restaurantes & Delivery,5.0
+2026-02-17,Pasaje Aéreo,Viajes & Ocio,5.0
+2026-02-17,Gadget nuevo,Compras & Tech,92.59
+2026-02-16,Regalo,Transferencias & Otros,76.15
+2026-02-16,Pago Amigo,Transferencias & Otros,49.27
+2026-02-16,Consulta Médica,Salud & Bienestar,424.13
+2026-02-15,Reembolso,Transferencias & Otros,159.12
+2026-02-14,Transferencia Familiar,Transferencias & Otros,62.43
+2026-02-14,Mercado Central,Supermercados,68.83
+2026-02-14,Gimnasio,Salud & Bienestar,491.1
+2026-02-13,Tienda Electrónica,Compras & Tech,5.0
+2026-02-13,Transferencia Familiar,Transferencias & Otros,101.14
+2026-02-13,Tienda Electrónica,Compras & Tech,5.0
+2026-02-13,Otros,Transferencias & Otros,66.91
+2026-02-12,Suplementos,Salud & Bienestar,288.26
+2026-02-11,Internet/TV,Hogar & Servicios,1235.82
+2026-02-10,Hotel,Viajes & Ocio,978.56
+2026-02-09,Pasaje Aéreo,Viajes & Ocio,1372.67
+2026-02-09,Taxi/Uber,Transporte & Auto,5.0
+2026-02-09,Restaurante Local,Restaurantes & Delivery,5.0
+2026-02-07,Turismo Local,Viajes & Ocio,610.44
+2026-02-07,Turismo Local,Viajes & Ocio,582.09
+2026-02-07,Cafetería,Restaurantes & Delivery,5.0
+2026-02-07,Excursión,Viajes & Ocio,1592.01
+2026-02-06,Alquiler/Cuota,Hogar & Servicios,5.0
+2026-02-06,Supermercado Semanal,Supermercados,323.41
+2026-02-05,Internet/TV,Hogar & Servicios,167.9
+2026-02-04,Hotel,Viajes & Ocio,2277.6
+2026-02-04,Consulta Médica,Salud & Bienestar,72.78
+2026-02-04,Tienda de Conveniencia,Supermercados,493.22
+2026-02-03,Tienda Online,Compras & Tech,404.51
+2026-02-03,Cafetería,Restaurantes & Delivery,215.97
+2026-02-02,Tienda Electrónica,Compras & Tech,796.18
+2026-02-02,Mantenimiento Hogar,Hogar & Servicios,5.0
+2026-02-02,Supermercado Semanal,Supermercados,34.77
+2026-02-02,Otros,Transferencias & Otros,56.33
+2026-02-02,Suplementos,Salud & Bienestar,75.73
+2026-01-31,Compras Granel,Supermercados,396.03
+2026-01-31,Internet/TV,Hogar & Servicios,277.33
+2026-01-29,Restaurante Local,Restaurantes & Delivery,5.0
+2026-01-29,Tienda Online,Compras & Tech,5.0
+2026-01-28,Reparación Vehículo,Transporte & Auto,408.91
+2026-01-28,Tienda Electrónica,Compras & Tech,1409.21
+2026-01-26,Internet/TV,Hogar & Servicios,5.0
+2026-01-26,Artículos Limpieza,Hogar & Servicios,600.78
+2026-01-25,Cena Fuera,Restaurantes & Delivery,5.0
+2026-01-24,Servicios Básicos,Hogar & Servicios,5.0
+2026-01-24,Supermercado Semanal,Supermercados,117.01
+2026-01-22,Spa/Tratamiento,Salud & Bienestar,404.89
+2026-01-19,Compras Granel,Supermercados,5.0
+2026-01-18,Transferencia Familiar,Transferencias & Otros,71.58
+2026-01-17,Bodega,Supermercados,100.39
+2026-01-16,Suscripción Digital,Compras & Tech,206.34
+2026-01-15,Tienda Electrónica,Compras & Tech,361.74
+2026-01-14,Reparación Vehículo,Transporte & Auto,192.97
+2026-01-12,Suplementos,Salud & Bienestar,366.85
+2026-01-12,Comida Rápida,Restaurantes & Delivery,5.0
+2026-01-11,Regalo,Transferencias & Otros,89.54
+2026-01-11,Reparación Vehículo,Transporte & Auto,5.0
+2026-01-11,Hotel,Viajes & Ocio,927.46
+2026-01-11,Taxi/Uber,Transporte & Auto,28.11
+2026-01-10,Mercado Central,Supermercados,93.35
+2026-01-10,Peaje,Transporte & Auto,86.79
+2026-01-10,Mantenimiento,Transporte & Auto,5.0
+2026-01-09,Estación de Servicio,Transporte & Auto,634.65
+2026-01-07,Pasaje Aéreo,Viajes & Ocio,1071.29
+2026-01-07,Farmacia,Salud & Bienestar,5.0
+2026-01-07,Peaje,Transporte & Auto,668.5
+2026-01-06,Estación de Servicio,Transporte & Auto,236.47
+2026-01-06,Suscripción Digital,Compras & Tech,408.3
+2026-01-06,Gadget nuevo,Compras & Tech,470.2
+2026-01-03,Software,Compras & Tech,549.68
+2026-01-02,Gadget nuevo,Compras & Tech,1528.43
+2026-01-02,Bodega,Supermercados,5.0
+2026-01-01,Delivery Pizza,Restaurantes & Delivery,318.67
+2026-01-01,Estación de Servicio,Transporte & Auto,459.84
+2025-12-31,Servicios Básicos,Hogar & Servicios,324.22
+2025-12-31,Entradas Cine/Teatro,Viajes & Ocio,5.0
+2025-12-30,Peaje,Transporte & Auto,328.9
+2025-12-29,Peaje,Transporte & Auto,10.91
+2025-12-28,Bodega,Supermercados,5.0
+2025-12-28,Taxi/Uber,Transporte & Auto,5.0
+2025-12-26,Servicios Básicos,Hogar & Servicios,788.36
+2025-12-26,Artículos Limpieza,Hogar & Servicios,487.3
+2025-12-25,Mantenimiento,Transporte & Auto,30.88
+2025-12-23,Artículos Limpieza,Hogar & Servicios,814.15
+2025-12-23,Comida Rápida,Restaurantes & Delivery,556.61
+2025-12-22,Compras Granel,Supermercados,357.8
+2025-12-20,Pago Amigo,Transferencias & Otros,7.96
+2025-12-19,Otros,Transferencias & Otros,89.51
+2025-12-18,Compras Granel,Supermercados,5.0
+2025-12-18,Spa/Tratamiento,Salud & Bienestar,354.42
+2025-12-17,Pago Amigo,Transferencias & Otros,84.41
+2025-12-17,Internet/TV,Hogar & Servicios,237.52
+2025-12-16,Hotel,Viajes & Ocio,5.0
+2025-12-16,Delivery Pizza,Restaurantes & Delivery,144.27
+2025-12-15,Reparación Vehículo,Transporte & Auto,92.9
+2025-12-13,Entradas Cine/Teatro,Viajes & Ocio,556.94
+2025-12-10,Hotel,Viajes & Ocio,716.58
+2025-12-09,Excursión,Viajes & Ocio,176.28
+2025-12-09,Taxi/Uber,Transporte & Auto,398.09
+2025-12-08,Taxi/Uber,Transporte & Auto,250.83
+2025-12-08,Cena Fuera,Restaurantes & Delivery,275.65
+2025-12-07,Compras Granel,Supermercados,170.29
+2025-12-07,Hotel,Viajes & Ocio,47.75
+2025-12-06,Reembolso,Transferencias & Otros,73.98
+2025-12-06,Consulta Médica,Salud & Bienestar,356.65
+2025-12-06,Taxi/Uber,Transporte & Auto,340.28
+2025-12-04,Bodega,Supermercados,433.58
+2025-12-03,Alquiler/Cuota,Hogar & Servicios,284.86
+2025-12-02,Gadget nuevo,Compras & Tech,5.0
+2025-12-01,Transferencia Familiar,Transferencias & Otros,105.33
+2025-12-01,Reparación Vehículo,Transporte & Auto,502.29
+2025-12-01,Cafetería,Restaurantes & Delivery,5.0
+2025-11-30,Mantenimiento,Transporte & Auto,5.0
+2025-11-29,Compras Granel,Supermercados,96.74
+2025-11-28,Pago Amigo,Transferencias & Otros,120.21
+2025-11-27,Hotel,Viajes & Ocio,5.0
+2025-11-23,Suplementos,Salud & Bienestar,232.95
+2025-11-23,Artículos Limpieza,Hogar & Servicios,1036.58
+2025-11-23,Pago Amigo,Transferencias & Otros,30.79
+2025-11-22,Pasaje Aéreo,Viajes & Ocio,5.0
+2025-11-21,Tienda de Conveniencia,Supermercados,324.98
+2025-11-19,Taxi/Uber,Transporte & Auto,495.26
+2025-11-19,Farmacia,Salud & Bienestar,162.17
+2025-11-18,Reparación Vehículo,Transporte & Auto,134.89
+2025-11-16,Entradas Cine/Teatro,Viajes & Ocio,158.82
+2025-11-15,Regalo,Transferencias & Otros,5.0
+2025-11-15,Compras Granel,Supermercados,74.88
+2025-11-14,Bodega,Supermercados,309.57
+2025-11-14,Farmacia,Salud & Bienestar,331.76
+2025-11-13,Cafetería,Restaurantes & Delivery,325.92
+2025-11-13,Artículos Limpieza,Hogar & Servicios,5.0
+2025-11-12,Reparación Vehículo,Transporte & Auto,239.0
+2025-11-12,Suplementos,Salud & Bienestar,276.57
+2025-11-11,Pago Amigo,Transferencias & Otros,5.0
+2025-11-11,Hotel,Viajes & Ocio,891.85
+2025-11-09,Tienda de Conveniencia,Supermercados,5.0
+2025-11-09,Tienda Electrónica,Compras & Tech,409.74
+2025-11-09,Artículos Limpieza,Hogar & Servicios,708.45
+2025-11-09,Restaurante Local,Restaurantes & Delivery,578.59
+2025-11-08,Gimnasio,Salud & Bienestar,582.33
+2025-11-07,Alquiler/Cuota,Hogar & Servicios,696.14
+2025-11-06,Mantenimiento Hogar,Hogar & Servicios,30.72
+2025-11-06,Regalo,Transferencias & Otros,42.08
+2025-11-05,Gimnasio,Salud & Bienestar,5.0
+2025-11-04,Taxi/Uber,Transporte & Auto,5.0
+2025-11-03,Regalo,Transferencias & Otros,146.31
+2025-11-02,Consulta Médica,Salud & Bienestar,276.06
+2025-10-31,Servicios Básicos,Hogar & Servicios,5.0
+2025-10-30,Alquiler/Cuota,Hogar & Servicios,429.86
+2025-10-30,Delivery Pizza,Restaurantes & Delivery,367.49
+2025-10-29,Entradas Cine/Teatro,Viajes & Ocio,255.64
+2025-10-29,Farmacia,Salud & Bienestar,29.11
+2025-10-27,Software,Compras & Tech,877.26
+2025-10-27,Estación de Servicio,Transporte & Auto,26.72
+2025-10-27,Taxi/Uber,Transporte & Auto,5.0
+2025-10-26,Gimnasio,Salud & Bienestar,5.0
+2025-10-25,Cena Fuera,Restaurantes & Delivery,766.11
+2025-10-24,Reparación Vehículo,Transporte & Auto,20.36
+2025-10-23,Suscripción Digital,Compras & Tech,5.0
+2025-10-22,Hotel,Viajes & Ocio,1327.77
+2025-10-19,Mercado Central,Supermercados,208.22
+2025-10-19,Comida Rápida,Restaurantes & Delivery,5.0
+2025-10-18,Hotel,Viajes & Ocio,98.65
+2025-10-18,Transferencia Familiar,Transferencias & Otros,61.47
+2025-10-16,Suscripción Digital,Compras & Tech,1462.27
+2025-10-15,Taxi/Uber,Transporte & Auto,278.97
+2025-10-15,Pasaje Aéreo,Viajes & Ocio,1258.19
+2025-10-14,Excursión,Viajes & Ocio,1059.44
+2025-10-14,Hotel,Viajes & Ocio,5.0
+2025-10-12,Supermercado Semanal,Supermercados,490.57
+2025-10-11,Comida Rápida,Restaurantes & Delivery,5.0
+2025-10-08,Compras Granel,Supermercados,347.14
+2025-10-08,Delivery Pizza,Restaurantes & Delivery,740.98
+2025-10-07,Compras Granel,Supermercados,5.0
+2025-10-06,Alquiler/Cuota,Hogar & Servicios,5.0
+2025-10-06,Otros,Transferencias & Otros,5.0
+2025-10-06,Tienda de Conveniencia,Supermercados,197.52
+2025-10-05,Reembolso,Transferencias & Otros,108.96
+2025-10-05,Transferencia Familiar,Transferencias & Otros,144.16
+2025-10-05,Artículos Limpieza,Hogar & Servicios,449.01
+2025-10-04,Mercado Central,Supermercados,50.5
+2025-10-03,Suplementos,Salud & Bienestar,864.47
+2025-10-01,Delivery Pizza,Restaurantes & Delivery,771.22
+2025-09-30,Compras Granel,Supermercados,287.25
+2025-09-30,Artículos Limpieza,Hogar & Servicios,5.0
+2025-09-30,Regalo,Transferencias & Otros,50.34
+2025-09-29,Hotel,Viajes & Ocio,5.0
+2025-09-28,Entradas Cine/Teatro,Viajes & Ocio,1519.32
+2025-09-27,Farmacia,Salud & Bienestar,327.81
+2025-09-26,Comida Rápida,Restaurantes & Delivery,92.72
+2025-09-25,Delivery Pizza,Restaurantes & Delivery,67.68
+2025-09-23,Transferencia Familiar,Transferencias & Otros,5.0
+2025-09-23,Mantenimiento Hogar,Hogar & Servicios,399.22
+2025-09-23,Reparación Vehículo,Transporte & Auto,553.15
+2025-09-21,Reembolso,Transferencias & Otros,187.43
+2025-09-20,Spa/Tratamiento,Salud & Bienestar,5.0
+2025-09-17,Servicios Básicos,Hogar & Servicios,5.0
+2025-09-17,Regalo,Transferencias & Otros,162.22
+2025-09-15,Pasaje Aéreo,Viajes & Ocio,5.0
+2025-09-14,Transferencia Familiar,Transferencias & Otros,5.0
+2025-09-13,Bodega,Supermercados,5.0
+2025-09-13,Consulta Médica,Salud & Bienestar,310.71
+2025-09-12,Mantenimiento Hogar,Hogar & Servicios,414.39
+2025-09-11,Excursión,Viajes & Ocio,338.67
+2025-09-11,Delivery Pizza,Restaurantes & Delivery,5.0
+2025-09-11,Gadget nuevo,Compras & Tech,5.0
+2025-09-11,Mantenimiento Hogar,Hogar & Servicios,129.16
+2025-09-07,Reparación Vehículo,Transporte & Auto,500.14
+2025-09-06,Internet/TV,Hogar & Servicios,5.0
+2025-09-06,Otros,Transferencias & Otros,62.64
+2025-09-06,Reparación Vehículo,Transporte & Auto,90.53
+2025-09-05,Hotel,Viajes & Ocio,213.2
+2025-09-05,Suplementos,Salud & Bienestar,181.92
+2025-09-04,Tienda Electrónica,Compras & Tech,5.0
+2025-09-04,Tienda Electrónica,Compras & Tech,998.09
+2025-09-03,Gadget nuevo,Compras & Tech,5.0
+2025-09-02,Reembolso,Transferencias & Otros,112.48
+2025-09-02,Delivery Pizza,Restaurantes & Delivery,5.0
+2025-09-02,Bodega,Supermercados,266.26
+2025-09-02,Cena Fuera,Restaurantes & Delivery,310.32
+2025-09-01,Consulta Médica,Salud & Bienestar,5.0
+2025-09-01,Transferencia Familiar,Transferencias & Otros,11.47
+2025-08-31,Farmacia,Salud & Bienestar,5.0
+2025-08-29,Excursión,Viajes & Ocio,503.68
+2025-08-29,Pasaje Aéreo,Viajes & Ocio,794.44
+2025-08-28,Estación de Servicio,Transporte & Auto,439.22
+2025-08-28,Transferencia Familiar,Transferencias & Otros,63.5
+2025-08-25,Delivery Pizza,Restaurantes & Delivery,5.0
+2025-08-25,Regalo,Transferencias & Otros,5.0
+2025-08-25,Reembolso,Transferencias & Otros,28.35
+2025-08-24,Hotel,Viajes & Ocio,527.92
+2025-08-23,Farmacia,Salud & Bienestar,118.41
+2025-08-21,Peaje,Transporte & Auto,128.31
+2025-08-21,Mantenimiento Hogar,Hogar & Servicios,5.0
+2025-08-20,Compras Granel,Supermercados,297.58
+2025-08-20,Reembolso,Transferencias & Otros,60.62
+2025-08-20,Internet/TV,Hogar & Servicios,5.0
+2025-08-19,Estación de Servicio,Transporte & Auto,177.57
+2025-08-19,Alquiler/Cuota,Hogar & Servicios,5.0
+2025-08-18,Mantenimiento Hogar,Hogar & Servicios,426.72
+2025-08-18,Alquiler/Cuota,Hogar & Servicios,47.63
+2025-08-18,Tienda Online,Compras & Tech,1162.36
+2025-08-18,Spa/Tratamiento,Salud & Bienestar,332.2
+2025-08-17,Restaurante Local,Restaurantes & Delivery,700.12
+2025-08-17,Servicios Básicos,Hogar & Servicios,232.09
+2025-08-17,Comida Rápida,Restaurantes & Delivery,411.82
+2025-08-17,Reparación Vehículo,Transporte & Auto,272.56
+2025-08-15,Farmacia,Salud & Bienestar,61.37
+2025-08-15,Reembolso,Transferencias & Otros,53.76
+2025-08-15,Reparación Vehículo,Transporte & Auto,5.0
+2025-08-14,Farmacia,Salud & Bienestar,436.16
+2025-08-14,Alquiler/Cuota,Hogar & Servicios,1058.8
+2025-08-13,Comida Rápida,Restaurantes & Delivery,893.78
+2025-08-11,Gimnasio,Salud & Bienestar,74.08
+2025-08-11,Spa/Tratamiento,Salud & Bienestar,5.0
+2025-08-10,Mercado Central,Supermercados,258.04
+2025-08-10,Supermercado Semanal,Supermercados,480.54
+2025-08-10,Software,Compras & Tech,5.7
+2025-08-08,Internet/TV,Hogar & Servicios,5.0
+2025-08-08,Supermercado Semanal,Supermercados,5.0
+2025-08-07,Servicios Básicos,Hogar & Servicios,610.57
+2025-08-06,Pasaje Aéreo,Viajes & Ocio,1295.97
+2025-08-06,Tienda Electrónica,Compras & Tech,5.0
+2025-08-06,Pago Amigo,Transferencias & Otros,55.32
+2025-08-05,Mantenimiento,Transporte & Auto,5.0
+2025-08-05,Mercado Central,Supermercados,146.94
+2025-08-04,Alquiler/Cuota,Hogar & Servicios,623.35
+2025-08-04,Mantenimiento Hogar,Hogar & Servicios,293.06
+2025-08-04,Tienda de Conveniencia,Supermercados,13.36
+2025-08-03,Pasaje Aéreo,Viajes & Ocio,398.4
+2025-08-02,Restaurante Local,Restaurantes & Delivery,5.0
+2025-08-02,Delivery Pizza,Restaurantes & Delivery,32.69
+2025-08-01,Estación de Servicio,Transporte & Auto,362.43
+2025-08-01,Suplementos,Salud & Bienestar,181.65
+2025-08-01,Delivery Pizza,Restaurantes & Delivery,5.0
+2025-08-01,Bodega,Supermercados,456.98
+2025-07-31,Transferencia Familiar,Transferencias & Otros,71.84
+2025-07-31,Cafetería,Restaurantes & Delivery,774.34
+2025-07-28,Farmacia,Salud & Bienestar,140.33
+2025-07-27,Peaje,Transporte & Auto,5.0
+2025-07-27,Farmacia,Salud & Bienestar,113.98
+2025-07-27,Estación de Servicio,Transporte & Auto,9.48
+2025-07-26,Excursión,Viajes & Ocio,782.1
+2025-07-26,Mantenimiento Hogar,Hogar & Servicios,449.18
+2025-07-25,Compras Granel,Supermercados,425.82
+2025-07-25,Bodega,Supermercados,5.0
+2025-07-24,Regalo,Transferencias & Otros,40.55
+2025-07-24,Artículos Limpieza,Hogar & Servicios,5.0
+2025-07-24,Mercado Central,Supermercados,524.62
+2025-07-24,Pago Amigo,Transferencias & Otros,66.66
+2025-07-22,Suplementos,Salud & Bienestar,543.36
+2025-07-21,Consulta Médica,Salud & Bienestar,5.0
+2025-07-18,Internet/TV,Hogar & Servicios,5.0
+2025-07-17,Servicios Básicos,Hogar & Servicios,623.76
+2025-07-17,Comida Rápida,Restaurantes & Delivery,550.44
+2025-07-16,Tienda de Conveniencia,Supermercados,330.01
+2025-07-12,Restaurante Local,Restaurantes & Delivery,5.0
+2025-07-12,Servicios Básicos,Hogar & Servicios,5.0
+2025-07-11,Internet/TV,Hogar & Servicios,5.0
+2025-07-10,Spa/Tratamiento,Salud & Bienestar,5.0
+2025-07-09,Suscripción Digital,Compras & Tech,151.05
+2025-07-08,Tienda de Conveniencia,Supermercados,10.68
+2025-07-07,Internet/TV,Hogar & Servicios,5.0
+2025-07-05,Gadget nuevo,Compras & Tech,5.0
+2025-07-04,Software,Compras & Tech,5.0
+2025-07-04,Otros,Transferencias & Otros,5.0
+2025-07-03,Gimnasio,Salud & Bienestar,5.0
+2025-07-02,Servicios Básicos,Hogar & Servicios,443.65
+2025-07-02,Reparación Vehículo,Transporte & Auto,5.0
+2025-07-01,Software,Compras & Tech,968.41
+2025-07-01,Comida Rápida,Restaurantes & Delivery,311.79
+2025-06-30,Alquiler/Cuota,Hogar & Servicios,806.77
+2025-06-30,Delivery Pizza,Restaurantes & Delivery,546.23
+2025-06-30,Mantenimiento,Transporte & Auto,160.03
+2025-06-29,Suscripción Digital,Compras & Tech,451.09
+2025-06-28,Excursión,Viajes & Ocio,1220.06
+2025-06-28,Entradas Cine/Teatro,Viajes & Ocio,42.28
+2025-06-27,Delivery Pizza,Restaurantes & Delivery,23.13
+2025-06-26,Comida Rápida,Restaurantes & Delivery,5.0
+2025-06-26,Turismo Local,Viajes & Ocio,5.0
+2025-06-25,Entradas Cine/Teatro,Viajes & Ocio,154.71
+2025-06-25,Peaje,Transporte & Auto,161.1
+2025-06-24,Estación de Servicio,Transporte & Auto,669.57
+2025-06-23,Compras Granel,Supermercados,219.77
+2025-06-22,Mantenimiento,Transporte & Auto,250.13
+2025-06-21,Comida Rápida,Restaurantes & Delivery,269.67
+2025-06-20,Consulta Médica,Salud & Bienestar,181.96
+2025-06-20,Taxi/Uber,Transporte & Auto,293.25
+2025-06-20,Alquiler/Cuota,Hogar & Servicios,1189.99
+2025-06-19,Farmacia,Salud & Bienestar,5.0
+2025-06-19,Gadget nuevo,Compras & Tech,5.0
+2025-06-18,Cafetería,Restaurantes & Delivery,417.91
+2025-06-18,Transferencia Familiar,Transferencias & Otros,176.08
+2025-06-18,Cafetería,Restaurantes & Delivery,5.0
+2025-06-15,Transferencia Familiar,Transferencias & Otros,161.43
+2025-06-14,Tienda de Conveniencia,Supermercados,408.56
+2025-06-14,Restaurante Local,Restaurantes & Delivery,569.06
+2025-06-13,Suscripción Digital,Compras & Tech,501.05
+2025-06-13,Estación de Servicio,Transporte & Auto,120.84
+2025-06-13,Tienda Electrónica,Compras & Tech,372.45
+2025-06-13,Compras Granel,Supermercados,54.46
+2025-06-11,Cafetería,Restaurantes & Delivery,348.17
+2025-06-11,Cena Fuera,Restaurantes & Delivery,56.4
+2025-06-11,Hotel,Viajes & Ocio,705.88
+2025-06-10,Alquiler/Cuota,Hogar & Servicios,5.0
+2025-06-09,Delivery Pizza,Restaurantes & Delivery,5.0
+2025-06-09,Cafetería,Restaurantes & Delivery,367.73
+2025-06-09,Suscripción Digital,Compras & Tech,1145.68
+2025-06-09,Peaje,Transporte & Auto,346.47
+2025-06-08,Farmacia,Salud & Bienestar,245.88
+2025-06-08,Pasaje Aéreo,Viajes & Ocio,1693.02
+2025-06-07,Reparación Vehículo,Transporte & Auto,5.0
+2025-06-07,Farmacia,Salud & Bienestar,437.09
+2025-06-07,Alquiler/Cuota,Hogar & Servicios,574.57
+2025-06-06,Tienda de Conveniencia,Supermercados,63.13
+2025-06-06,Farmacia,Salud & Bienestar,5.0
+2025-06-06,Spa/Tratamiento,Salud & Bienestar,167.02
+2025-06-05,Consulta Médica,Salud & Bienestar,630.28
+2025-06-05,Entradas Cine/Teatro,Viajes & Ocio,507.2
+2025-06-05,Peaje,Transporte & Auto,68.54
+2025-06-04,Cena Fuera,Restaurantes & Delivery,98.7
+2025-06-03,Estación de Servicio,Transporte & Auto,5.0
+2025-06-03,Estación de Servicio,Transporte & Auto,550.06
+2025-06-02,Suplementos,Salud & Bienestar,213.22
+2025-05-31,Regalo,Transferencias & Otros,91.61
+2025-05-31,Farmacia,Salud & Bienestar,563.04
+2025-05-28,Mantenimiento Hogar,Hogar & Servicios,5.0
+2025-05-27,Tienda de Conveniencia,Supermercados,170.31
+2025-05-26,Software,Compras & Tech,1377.34
+2025-05-26,Reembolso,Transferencias & Otros,42.99
+2025-05-25,Software,Compras & Tech,1172.58
+2025-05-25,Farmacia,Salud & Bienestar,5.0
+2025-05-25,Restaurante Local,Restaurantes & Delivery,5.0
+2025-05-25,Farmacia,Salud & Bienestar,230.18
+2025-05-24,Spa/Tratamiento,Salud & Bienestar,5.0
+2025-05-23,Supermercado Semanal,Supermercados,237.52
+2025-05-22,Suscripción Digital,Compras & Tech,5.0
+2025-05-20,Internet/TV,Hogar & Servicios,355.46
+2025-05-20,Mantenimiento Hogar,Hogar & Servicios,5.0
+2025-05-20,Pago Amigo,Transferencias & Otros,68.0
+2025-05-19,Gadget nuevo,Compras & Tech,114.89
+2025-05-18,Gimnasio,Salud & Bienestar,263.92
+2025-05-16,Gimnasio,Salud & Bienestar,328.09
+2025-05-16,Otros,Transferencias & Otros,72.78
+2025-05-15,Mercado Central,Supermercados,461.78
+2025-05-13,Delivery Pizza,Restaurantes & Delivery,5.0
+2025-05-12,Transferencia Familiar,Transferencias & Otros,5.0
+2025-05-12,Comida Rápida,Restaurantes & Delivery,101.82
+2025-05-11,Transferencia Familiar,Transferencias & Otros,32.6
+2025-05-11,Mantenimiento Hogar,Hogar & Servicios,633.08
+2025-05-10,Regalo,Transferencias & Otros,5.0
+2025-05-09,Tienda Online,Compras & Tech,5.0
+2025-05-06,Peaje,Transporte & Auto,5.22
+2025-05-05,Comida Rápida,Restaurantes & Delivery,394.51
+2025-05-04,Pago Amigo,Transferencias & Otros,170.58
+2025-05-03,Suplementos,Salud & Bienestar,108.06
+2025-05-02,Suscripción Digital,Compras & Tech,5.0
+2025-05-01,Regalo,Transferencias & Otros,75.46
+2025-05-01,Pago Amigo,Transferencias & Otros,5.0
+2025-04-30,Gadget nuevo,Compras & Tech,5.0
+2025-04-30,Excursión,Viajes & Ocio,708.35
+2025-04-30,Pasaje Aéreo,Viajes & Ocio,1014.27
+2025-04-29,Compras Granel,Supermercados,267.98
+2025-04-29,Artículos Limpieza,Hogar & Servicios,5.0
+2025-04-26,Tienda de Conveniencia,Supermercados,634.54
+2025-04-26,Otros,Transferencias & Otros,62.97
+2025-04-26,Spa/Tratamiento,Salud & Bienestar,199.78
+2025-04-26,Cafetería,Restaurantes & Delivery,32.53
+2025-04-25,Tienda de Conveniencia,Supermercados,5.0
+2025-04-24,Tienda Online,Compras & Tech,5.0
+2025-04-24,Mercado Central,Supermercados,259.71
+2025-04-24,Farmacia,Salud & Bienestar,5.0
+2025-04-23,Tienda de Conveniencia,Supermercados,5.0
+2025-04-20,Suplementos,Salud & Bienestar,646.92
+2025-04-19,Mantenimiento Hogar,Hogar & Servicios,5.0
+2025-04-17,Taxi/Uber,Transporte & Auto,5.0
+2025-04-16,Excursión,Viajes & Ocio,905.53
+2025-04-16,Mantenimiento Hogar,Hogar & Servicios,5.0
+2025-04-16,Spa/Tratamiento,Salud & Bienestar,504.44
+2025-04-15,Reparación Vehículo,Transporte & Auto,5.0
+2025-04-15,Pasaje Aéreo,Viajes & Ocio,5.0
+2025-04-15,Gimnasio,Salud & Bienestar,254.81
+2025-04-15,Turismo Local,Viajes & Ocio,5.0
+2025-04-14,Entradas Cine/Teatro,Viajes & Ocio,5.0
+2025-04-13,Hotel,Viajes & Ocio,322.72
+2025-04-13,Otros,Transferencias & Otros,53.35
+2025-04-12,Reembolso,Transferencias & Otros,58.39
+2025-04-12,Restaurante Local,Restaurantes & Delivery,5.0
+2025-04-12,Gadget nuevo,Compras & Tech,5.0
+2025-04-11,Tienda Electrónica,Compras & Tech,5.0
+2025-04-11,Suscripción Digital,Compras & Tech,795.63
+2025-04-11,Tienda de Conveniencia,Supermercados,593.77
+2025-04-10,Comida Rápida,Restaurantes & Delivery,707.17
+2025-04-09,Bodega,Supermercados,108.55
+2025-04-09,Alquiler/Cuota,Hogar & Servicios,442.78
+2025-04-09,Software,Compras & Tech,2288.28
+2025-04-09,Delivery Pizza,Restaurantes & Delivery,37.09
+2025-04-09,Consulta Médica,Salud & Bienestar,19.61
+2025-04-08,Suplementos,Salud & Bienestar,355.96
+2025-04-08,Reparación Vehículo,Transporte & Auto,299.11
+2025-04-08,Excursión,Viajes & Ocio,1401.98
+2025-04-07,Software,Compras & Tech,789.57
+2025-04-06,Consulta Médica,Salud & Bienestar,155.38
+2025-04-06,Tienda de Conveniencia,Supermercados,232.21
+2025-04-03,Servicios Básicos,Hogar & Servicios,102.15
+2025-04-02,Suscripción Digital,Compras & Tech,5.0
+2025-04-02,Tienda Electrónica,Compras & Tech,502.49
+2025-04-01,Cafetería,Restaurantes & Delivery,178.55
+2025-04-01,Comida Rápida,Restaurantes & Delivery,623.97
+2025-03-31,Compras Granel,Supermercados,445.36
+2025-03-30,Suplementos,Salud & Bienestar,579.67
+2025-03-29,Pasaje Aéreo,Viajes & Ocio,5.0
+2025-03-29,Alquiler/Cuota,Hogar & Servicios,413.88
+2025-03-29,Tienda Electrónica,Compras & Tech,5.0
+2025-03-28,Cafetería,Restaurantes & Delivery,30.58
+2025-03-28,Delivery Pizza,Restaurantes & Delivery,263.41
+2025-03-26,Suplementos,Salud & Bienestar,43.67
+2025-03-25,Software,Compras & Tech,697.72
+2025-03-25,Reembolso,Transferencias & Otros,92.55
+2025-03-25,Supermercado Semanal,Supermercados,283.29
+2025-03-25,Farmacia,Salud & Bienestar,309.22
+2025-03-25,Regalo,Transferencias & Otros,80.59
+2025-03-24,Suscripción Digital,Compras & Tech,1465.55
+2025-03-23,Tienda Electrónica,Compras & Tech,841.57
+2025-03-22,Pasaje Aéreo,Viajes & Ocio,1489.46
+2025-03-22,Hotel,Viajes & Ocio,379.96
+2025-03-21,Cena Fuera,Restaurantes & Delivery,459.34
+2025-03-21,Otros,Transferencias & Otros,94.6
+2025-03-20,Tienda de Conveniencia,Supermercados,242.87
+2025-03-19,Spa/Tratamiento,Salud & Bienestar,748.82
+2025-03-19,Tienda de Conveniencia,Supermercados,310.17
+2025-03-19,Entradas Cine/Teatro,Viajes & Ocio,1069.09
+2025-03-18,Excursión,Viajes & Ocio,117.21
+2025-03-18,Estación de Servicio,Transporte & Auto,29.92
+2025-03-17,Pasaje Aéreo,Viajes & Ocio,10.39
+2025-03-16,Gimnasio,Salud & Bienestar,5.0
+2025-03-15,Comida Rápida,Restaurantes & Delivery,317.71
+2025-03-15,Servicios Básicos,Hogar & Servicios,66.96
+2025-03-14,Software,Compras & Tech,318.53
+2025-03-13,Tienda Online,Compras & Tech,634.71
+2025-03-13,Mantenimiento Hogar,Hogar & Servicios,180.51
+2025-03-12,Alquiler/Cuota,Hogar & Servicios,5.0
+2025-03-11,Gimnasio,Salud & Bienestar,5.0
+2025-03-10,Transferencia Familiar,Transferencias & Otros,133.31
+2025-03-10,Spa/Tratamiento,Salud & Bienestar,5.0
+2025-03-09,Spa/Tratamiento,Salud & Bienestar,472.55
+2025-03-09,Artículos Limpieza,Hogar & Servicios,223.05
+2025-03-09,Reembolso,Transferencias & Otros,45.56
+2025-03-09,Delivery Pizza,Restaurantes & Delivery,156.39
+2025-03-09,Entradas Cine/Teatro,Viajes & Ocio,618.33
+2025-03-09,Estación de Servicio,Transporte & Auto,400.42
+2025-03-07,Cafetería,Restaurantes & Delivery,885.45
+2025-03-06,Cena Fuera,Restaurantes & Delivery,117.49
+2025-03-06,Servicios Básicos,Hogar & Servicios,444.59
+2025-03-06,Gimnasio,Salud & Bienestar,262.05
+2025-03-05,Supermercado Semanal,Supermercados,190.86
+2025-03-04,Cena Fuera,Restaurantes & Delivery,320.75
+2025-03-04,Turismo Local,Viajes & Ocio,5.0
+2025-03-04,Suplementos,Salud & Bienestar,194.76
+2025-03-03,Suplementos,Salud & Bienestar,617.25
+2025-03-02,Farmacia,Salud & Bienestar,483.62
+2025-03-01,Excursión,Viajes & Ocio,1251.87
+2025-03-01,Reembolso,Transferencias & Otros,146.01
+2025-03-01,Estación de Servicio,Transporte & Auto,487.71
+2025-02-28,Reembolso,Transferencias & Otros,162.24
+2025-02-27,Internet/TV,Hogar & Servicios,5.0
+2025-02-27,Gadget nuevo,Compras & Tech,5.0
+2025-02-25,Bodega,Supermercados,406.92
+2025-02-25,Estación de Servicio,Transporte & Auto,5.0
+2025-02-23,Alquiler/Cuota,Hogar & Servicios,324.02
+2025-02-22,Supermercado Semanal,Supermercados,218.97
+2025-02-22,Artículos Limpieza,Hogar & Servicios,458.2
+2025-02-21,Tienda Online,Compras & Tech,23.53
+2025-02-20,Software,Compras & Tech,5.0
+2025-02-19,Estación de Servicio,Transporte & Auto,5.0
+2025-02-19,Mercado Central,Supermercados,403.34
+2025-02-18,Alquiler/Cuota,Hogar & Servicios,5.0
+2025-02-18,Gimnasio,Salud & Bienestar,305.13
+2025-02-18,Peaje,Transporte & Auto,209.39
+2025-02-17,Mantenimiento,Transporte & Auto,335.35
+2025-02-16,Comida Rápida,Restaurantes & Delivery,265.4
+2025-02-16,Suscripción Digital,Compras & Tech,1636.41
+2025-02-15,Excursión,Viajes & Ocio,5.0
+2025-02-15,Pago Amigo,Transferencias & Otros,94.3
+2025-02-15,Internet/TV,Hogar & Servicios,5.0
+2025-02-15,Mercado Central,Supermercados,218.52
+2025-02-14,Alquiler/Cuota,Hogar & Servicios,5.0
+2025-02-14,Otros,Transferencias & Otros,73.21
+2025-02-14,Estación de Servicio,Transporte & Auto,5.0
+2025-02-13,Pago Amigo,Transferencias & Otros,164.74
+2025-02-12,Cafetería,Restaurantes & Delivery,119.48
+2025-02-07,Spa/Tratamiento,Salud & Bienestar,616.51
+2025-02-06,Delivery Pizza,Restaurantes & Delivery,5.0
+2025-02-06,Mantenimiento Hogar,Hogar & Servicios,321.64
+2025-02-06,Tienda de Conveniencia,Supermercados,58.42
+2025-02-05,Peaje,Transporte & Auto,5.0
+2025-02-05,Peaje,Transporte & Auto,88.53
+2025-02-02,Artículos Limpieza,Hogar & Servicios,284.34
+2025-02-02,Artículos Limpieza,Hogar & Servicios,5.0
+2025-02-02,Reparación Vehículo,Transporte & Auto,112.85
+2025-02-02,Alquiler/Cuota,Hogar & Servicios,578.12
+2025-02-02,Excursión,Viajes & Ocio,5.0
+2025-01-31,Gimnasio,Salud & Bienestar,544.55
+2025-01-31,Suscripción Digital,Compras & Tech,695.47
+2025-01-30,Spa/Tratamiento,Salud & Bienestar,5.0
+2025-01-30,Restaurante Local,Restaurantes & Delivery,5.0
+2025-01-29,Alquiler/Cuota,Hogar & Servicios,476.71
+2025-01-29,Alquiler/Cuota,Hogar & Servicios,5.0
+2025-01-28,Turismo Local,Viajes & Ocio,1137.67
+2025-01-28,Excursión,Viajes & Ocio,1790.73
+2025-01-27,Supermercado Semanal,Supermercados,95.26
+2025-01-27,Gadget nuevo,Compras & Tech,972.27
+2025-01-25,Regalo,Transferencias & Otros,5.0
+2025-01-25,Internet/TV,Hogar & Servicios,125.48
+2025-01-24,Cena Fuera,Restaurantes & Delivery,5.0
+2025-01-24,Mercado Central,Supermercados,269.35
+2025-01-24,Cena Fuera,Restaurantes & Delivery,5.0
+2025-01-24,Pasaje Aéreo,Viajes & Ocio,1194.63
+2025-01-23,Artículos Limpieza,Hogar & Servicios,1063.85
+2025-01-23,Excursión,Viajes & Ocio,5.0
+2025-01-23,Delivery Pizza,Restaurantes & Delivery,25.35
+2025-01-23,Internet/TV,Hogar & Servicios,730.95
+2025-01-21,Otros,Transferencias & Otros,82.59
+2025-01-21,Spa/Tratamiento,Salud & Bienestar,23.67
+2025-01-21,Peaje,Transporte & Auto,5.0
+2025-01-20,Software,Compras & Tech,1250.24
+2025-01-19,Servicios Básicos,Hogar & Servicios,182.11
+2025-01-19,Comida Rápida,Restaurantes & Delivery,403.44
+2025-01-18,Hotel,Viajes & Ocio,5.0
+2025-01-17,Hotel,Viajes & Ocio,1167.0
+2025-01-17,Restaurante Local,Restaurantes & Delivery,45.94
+2025-01-14,Cena Fuera,Restaurantes & Delivery,436.15
+2025-01-13,Mercado Central,Supermercados,251.59
+2025-01-13,Taxi/Uber,Transporte & Auto,5.0
+2025-01-12,Mercado Central,Supermercados,206.38
+2025-01-12,Tienda Electrónica,Compras & Tech,393.96
+2025-01-11,Software,Compras & Tech,5.0
+2025-01-11,Gadget nuevo,Compras & Tech,5.0
+2025-01-11,Mercado Central,Supermercados,296.13
+2025-01-10,Suscripción Digital,Compras & Tech,5.0
+2025-01-08,Excursión,Viajes & Ocio,5.0
+2025-01-08,Tienda Electrónica,Compras & Tech,924.99
+2025-01-08,Gimnasio,Salud & Bienestar,289.45
+2025-01-07,Pasaje Aéreo,Viajes & Ocio,955.89
+2025-01-07,Hotel,Viajes & Ocio,163.33
+2025-01-07,Supermercado Semanal,Supermercados,191.79
+2025-01-06,Hotel,Viajes & Ocio,5.0
+2025-01-06,Suscripción Digital,Compras & Tech,1954.65
+2025-01-06,Otros,Transferencias & Otros,39.05
+2025-01-03,Comida Rápida,Restaurantes & Delivery,277.61
+2025-01-03,Peaje,Transporte & Auto,439.23
+2025-01-02,Tienda Electrónica,Compras & Tech,420.1
+2025-01-02,Consulta Médica,Salud & Bienestar,115.6
+2025-01-01,Regalo,Transferencias & Otros,140.56
