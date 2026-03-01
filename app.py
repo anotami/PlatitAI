@@ -5,7 +5,7 @@ import os
 import re
 
 # ==================== CONFIGURACIÓN Y ESTILOS ====================
-st.set_page_config(page_title="PlatitAI - Inteligencia Financiera", layout="wide")
+st.set_page_config(page_title="PlatitAI | FTDStudio", layout="wide")
 
 # Estilo para el nombre de la marca
 BRAND_STYLE = """
@@ -282,3 +282,4 @@ else:
     # Expander de datos crudos al final de cualquier página
     with st.expander("📋 Ver Registro Completo de Movimientos"):
         st.dataframe(df_f[['Fecha', 'Comercio', 'Categoria_Final', 'Monto']].sort_values('Fecha', ascending=False), use_container_width=True)
+
